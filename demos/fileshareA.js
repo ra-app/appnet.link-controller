@@ -58,7 +58,7 @@ var nmclnsA = new nmCln({
             {ip: 'localhost', agent: 51866, proxy: 51688} // every turn-server include proxy and agent port
         ]
     },
-    usrinfo: {domain: '51dese.com', usrkey: 'A'},
+    usrinfo: {domain: 'de.webconnect.pro', usrkey: 'A'},
     conmode: SEP.SEP_MODE_CS // c/s mode as httpp server
 });
 

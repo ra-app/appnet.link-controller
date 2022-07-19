@@ -19,7 +19,7 @@ var nmcln = new APPNET({
             {ip: 'localhost', agent: 51866, proxy: 51688} // every turn-server include proxy and agent port
         ]
     },
-    usrinfo: {domain: '51dese.com', usrkey: 'public'},
+    usrinfo: {domain: 'de.webconnect.pro', usrkey: 'public'},
     conmode: SEP.SEP_MODE_CS,    // c/s mode as httpp server
       vmode: vURL.URL_MODE_PATH, // vURL mode: vpath-based
 });

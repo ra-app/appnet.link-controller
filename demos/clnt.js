@@ -26,7 +26,7 @@ var nmclnsB = new nmCln({
             {ip: 'localhost', agent: 51866, proxy: 51688} // every turn-server include proxy and agent port
         ]
     },
-    usrinfo: {domain: '51dese.com', usrkey: 'B'},
+    usrinfo: {domain: 'de.webconnect.pro', usrkey: 'B'},
     conmode: SEP.SEP_MODE_CS,
       vmode: vURL.URL_MODE_PATH
 });
@@ -78,7 +78,7 @@ var nmclnsA = new nmCln({
             {ip: 'localhost', agent: 51866, proxy: 51688} // every turn-server include proxy and agent port
         ]
     },
-    usrinfo: {domain: '51dese.com', usrkey: 'A'},
+    usrinfo: {domain: 'de.webconnect.pro', usrkey: 'A'},
     conmode: SEP.SEP_MODE_CS,
       vmode: vURL.URL_MODE_PATH
 });
@@ -113,7 +113,7 @@ nmclnsA.on('ready', function() {
     });*/
 
     // ask for user-specific Logins info
-    nmclnsA.getUsrLogins({domain: '51dese.com', usrkey: 'B'}, function(err, logins){
+    nmclnsA.getUsrLogins({domain: 'de.webconnect.pro', usrkey: 'B'}, function(err, logins){
         if (!err) {
             ///console.log('nmclnsB Logins answer:'+logins.length+','+JSON.stringify(logins));
           

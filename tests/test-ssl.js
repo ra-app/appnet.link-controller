@@ -11,16 +11,16 @@ var genSslCert = exports.genSslCert = function(filename, info, fn){
         fn = info;
         
         info = {};
-        info.cn = '51dese.com';
+        info.cn = 'de.webconnect.pro';
     }
     if (!info.cn) {
-        info.cn = '51dese.com';    
+        info.cn = 'de.webconnect.pro';    
     }
     filename += info.cn;
     filename = filename.replace('*', 'x');
 
     // 1.
-    // generate wildcard ssl certificate for *.vurl.51dese.com,*.vurl.local.51dese.com
+    // generate wildcard ssl certificate for *.vurl.de.webconnect.pro,*.vurl.local.de.webconnect.pro
     // openssl req -x509 -nodes -days 365 -subj '/C=CN/ST=SH/L=SH/CN=domain' -newkey rsa:1024 -keyout server-key.pem -out server-cert.pem
     var clistr = ['req', '-x509', '-nodes'];
     

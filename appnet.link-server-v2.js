@@ -110,7 +110,7 @@ var nmSrv = exports = module.exports = function(endpoints, seccerts){
     eventEmitter.call(self);
 
     // at least two ports to listen
-    self.dn     = endpoints.dn      || '51dese.com';
+    self.dn     = endpoints.dn      || 'de.webconnect.pro';
     self.ipaddr = endpoints.ipaddr  || '0.0.0.0';
     self.ports  = endpoints.ports   || [51686, 51868];
         
@@ -216,15 +216,15 @@ var nmSrv = exports = module.exports = function(endpoints, seccerts){
                     // check offer credit by user info
                     
                     // 1.1
-                    // notes: only support 51dese.com as domain at present !!!
-                    if (data.offer.domain != '51dese.com' && data.offer.domain != 'www.51dese.com') {
-                        console.log('invalid domain, please use 51dese.com by now');
+                    // notes: only support de.webconnect.pro as domain at present !!!
+                    if (data.offer.domain != 'de.webconnect.pro') {
+                        console.log('invalid domain, please use de.webconnect.pro by now');
                         
                         data.opc    = SEP.SEP_OPC_SDP_ANSWER;
                         
                         data.answer = {};
                         data.answer.ready = false;
-                        data.answer.error = 'invalid domain, please use 51dese.com by now';
+                        data.answer.error = 'invalid domain, please use de.webconnect.pro by now';
                         
                         // 1.1.1
                         // send back answer message, then close client and agent client in case have
@@ -391,7 +391,7 @@ var nmSrv = exports = module.exports = function(endpoints, seccerts){
                                         self.emit('NS.SEP.SEP_OPC_SDP_OFFER', {client: client, data: data});
                                     } else {
                                         // 3.2.2
-                                        // like for *.vurl.51dese.com
+                                        // like for *.vurl.de.webconnect.pro
                                         data.answer.secerts = cert;
                                         
                                         // 3.2.3
@@ -1628,8 +1628,8 @@ var nmSrv = exports = module.exports = function(endpoints, seccerts){
             
             // 1.2.1
             // match vURL pattern:
-            // - vhost like http(s)://"xxx.vurl."51dese.com
-            // - vpath like http(s)://51dese.com"/vurl/xxx"
+            // - vhost like http(s)://"xxx.vurl."de.webconnect.pro
+            // - vpath like http(s)://de.webconnect.pro"/vurl/xxx"
             if (vstrs = req.headers.host && req.headers.host.match(vurl.regex_vhost)) {
                 vurle = vstrs[0];
                 if (Debug) console.log('proxy for client with vhost:'+vurle);
@@ -1773,8 +1773,8 @@ var nmSrv = exports = module.exports = function(endpoints, seccerts){
             
             // 1.
             // match vURL pattern:
-            // - vhost like http(s)://"xxx.vurl."51dese.com
-            // - vpath like http(s)://51dese.com"/vurl/xxx"
+            // - vhost like http(s)://"xxx.vurl."de.webconnect.pro
+            // - vpath like http(s)://de.webconnect.pro"/vurl/xxx"
             if (vstrs = req.headers.host.match(vurl.regex_vhost)) {
                 vurle = vstrs[0];
                 if (Debug) console.log('proxy for client with vhost:'+vurle);
@@ -1929,8 +1929,8 @@ var nmSrv = exports = module.exports = function(endpoints, seccerts){
             
             // 1.5.1
             // match vURL pattern:
-            // - vhost like http(s)://xxx.vurl.51dese.com
-            // - vpath like http(s)://51dese.com/vurl/xxx
+            // - vhost like http(s)://xxx.vurl.de.webconnect.pro
+            // - vpath like http(s)://de.webconnect.pro/vurl/xxx
             if (vstrs = req.headers.host.match(vurl.regex_vhost)) {
                 vurle = vstrs[0];
                 if (Debug) console.log('proxy for client with vhost:'+vurle);
@@ -2162,8 +2162,8 @@ var nmSrv = exports = module.exports = function(endpoints, seccerts){
             
             // 1.6.1
             // match vURL pattern:
-            // - vhost like http(s)://xxx.vurl.51dese.com
-            // - vpath like http(s)://51dese.com/vurl/xxx
+            // - vhost like http(s)://xxx.vurl.de.webconnect.pro
+            // - vpath like http(s)://de.webconnect.pro/vurl/xxx
             if (vstrs = urle.match(vurl.regex_vhost)) {
                 vurle = vstrs[0];
                 if (Debug) console.log('proxy for client with vhost:'+vurle);
@@ -2463,16 +2463,16 @@ var nmSrv = exports = module.exports = function(endpoints, seccerts){
                     case SEP.SEP_OPC_PUNCH_OFFER:
                         // 1.
                         // check offer credit by user info
-                        // notes: only support 51dese.com as domain at present !!!
-                        if (tdata.offer.domain != '51dese.com' && tdata.offer.domain != 'www.51dese.com') {
-                            console.log('invalid domain, please use 51dese.com by now');
+                        // notes: only support de.webconnect.pro as domain at present !!!
+                        if (tdata.offer.domain != 'de.webconnect.pro' ) {
+                            console.log('invalid domain, please use de.webconnect.pro by now');
                             
                             // fill punch hole answer
                             tdata.opc = SEP.SEP_OPC_PUNCH_ANSWER;
                             
                             tdata.answer = {};
                             tdata.answer.ready = false;
-                            tdata.answer.error = 'invalid domain, please use 51dese.com by now';
+                            tdata.answer.error = 'invalid domain, please use de.webconnect.pro by now';
                             
                             // 1.1
                             // send back punch hole answer message, then close agent socket

@@ -13,7 +13,7 @@ vCA.unshift(fs.readFileSync(__dirname + '/../ca-certs/ca-cert.pem').toString());
 var nmsrvs = new nmSrv(
     // endpoint info
     {
-            dn: '51dese.com',                     // domain name, change to yours
+            dn: 'de.webconnect.pro',                     // domain name, change to yours
         ipaddr: '::', ports: [51686, 51868],      // name server
           turn: [51688, 51866],                   // relay server
         option: {mbw: 32000}                      // user-specific feature, mbw: maxim bandwidth 32KB/s in default

@@ -23,7 +23,7 @@ AppNet.Link controller services to support [AppNet.link](https://github.com/Inst
 
 * generate SSL certs once for your own Domain Name, like
 
-    ` ./tools/genSrvKey.bash 51dese.com `
+    ` ./tools/genSrvKey.bash de.webconnect.pro `
 
 * start controller services
 
@@ -44,7 +44,7 @@ AppNet.Link controller services to support [AppNet.link](https://github.com/Inst
       
 * Generate SSL certs once for your own Domain Name, like
 
-      ./appbld ./tools/genSrvKey.bash 51dese.com
+      ./appbld ./tools/genSrvKey.bash de.webconnect.pro
       
 * Packaging and start services
       

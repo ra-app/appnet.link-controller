@@ -14,5 +14,5 @@ if [ $# -ne 0 ]; then
 else
   echo "Start building ..."
   docker run -v `pwd`:`pwd` -w `pwd` -i -t --rm --network host appnet-bld:4.1 \
-  bash -c "npm i --only=prod && ./tools/genSrvKey.bash 51dese.com"
+  bash -c "npm i --only=prod && ./tools/genSrvKey.bash de.webconnect.pro"
 fi

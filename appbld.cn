@@ -14,5 +14,5 @@ else
   echo "Start building ..."
   docker run -v `pwd`:`pwd` -w `pwd` -i -t --rm --network host appnet-bld:4.1 \
   bash -c "npm config set registry=http://registry.npm.taobao.org && \
-           npm i --only=prod && ./tools/genSrvKey.bash 51dese.com"
+           npm i --only=prod && ./tools/genSrvKey.bash de.webconnect.pro"
 fi
